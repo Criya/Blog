@@ -1,0 +1,67 @@
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body{
+    background: black;
+    color: white;
+    margin: 0;
+}
+
+.top-nav{
+    padding: 24px 20px;
+
+}
+
+.top-nav > .logo {
+    float: left;
+}
+
+.top-nav > nav{
+    float: right;
+}
+
+.top-nav > nav > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.top-nav > nav > ul > li{
+    float: left;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.top-nav > nav > ul > li > a{
+    font-size: 12px;
+    color: #B7B7B7;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    display: block;
+    border-bottom: solid 2px transparent;
+    border-top: solid 2px transparent;
+}
+
+.top-nav > nav > ul > li > a:hover{
+    border-bottom: solid 2px #e6686d;
+}
+
+.top-nav > a{
+    text-decoration: none;
+}
+
+.top-nav .logo{
+    font-size: 26px;
+    font-family: 'Arial Black';
+}
+.top-nav .logo .rs{
+    color: #e6686d; 
+    margin-right: 4px; 
+}
+.top-nav .logo .card{
+    color: #9a9da2;
+}
