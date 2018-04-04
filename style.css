@@ -9,9 +9,18 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     background-color: #efefef;
     margin: 0;
+}
+
+hr{
+    border: none;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .banner{
@@ -91,8 +100,8 @@ body{
     max-width: 930px;
     margin-right: auto;
     margin-left: auto;
-    background-color: #efefef;
-    border: solid 1px red;
+    background-color: #fff;
+    
 }
 
 .profile-card .picture{
@@ -102,10 +111,12 @@ body{
 .profile-card .info{
     float: left;
     margin-left: 62px;
+    width: 440px;
 }
 
 .profile-card-inner{
-    margin: 57px 50px;
+    padding: 57px 50px;
+    
 }
 
 .info .welcome{
@@ -129,4 +140,59 @@ body{
     position: absolute;
     top: 100%;
     left: 4px;
+}
+
+.profile-card .info h1{
+    margin-top: 27px;
+    margin-bottom: 8px;
+}
+
+.profile-card .info hr{
+    margin: 20px 0;
+}
+
+.profile-card .info dl dd,
+.profile-card .info dl dt
+{
+    float: left;
+}
+
+.profile-card .info dl dt{
+    width: 30%;
+    font-weight: bold;
+    margin: 10px 0;
+   
+}
+
+.profile-card .info dl dd{
+    width: 70%;
+    color: #9da0a7;
+    margin: 10px 0;
+}
+
+.profile-card  .media{
+    background-color: #e6686d;
+    text-align: center;
+} 
+
+.profile-card footer a{
+    display: inline-block;
+    width: 25px;
+    line-height: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+.profile-card footer a:hover{
+    background-color: #cf5d62;
+}
+
+.profile-card footer svg{
+    fill: white;
+    width: 25px;
+    height: 25px;
+
+    /* 图标水平居中，防止上窄下宽 */
+    vertical-align: top;
 }
