@@ -244,7 +244,8 @@ h2 {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    font-family: cursive;
+    font-family: kai, "Hiragino Sans GB", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
     line-height: 1.8;
     font-size: 20px;
 }
@@ -330,10 +331,9 @@ section.portfilo nav .bar {
     border-radius: 3px;
 }
 
-section.portfilo nav .bar .bar-inner{
+section.portfilo nav .bar .bar-inner {
     transition: all 0.3s;
 }
-
 
 section.portfilo nav .bar.state1 .bar-inner {
     height: 100%;
@@ -359,7 +359,7 @@ section.portfilo nav .bar.state3 .bar-inner {
     border-radius: 3px;
 }
 
-section.portfilo .works{
+section.portfilo .works {
     width: 921px;
     height: 576px;
     position: relative;
@@ -368,15 +368,15 @@ section.portfilo .works{
 }
 
 section.portfilo .works .big,
-section.portfilo .works .small
-{
+section.portfilo .works .small {
     position: absolute;
     border: 1px solid #cacaca;
     /*去掉添加border后空白bug*/
     /*font-size: 0;*/
 }
+
 /*去掉添加border后空白bug*/
-section.portfilo .works img{
+section.portfilo .works img {
     display: block;
 }
 
