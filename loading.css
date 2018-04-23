@@ -1,14 +1,16 @@
-.loadingPage{
-    display: none;
-}
 
-.loadingPage,.active{
+.loadingPage{
     background: grey;
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
+
+.loadingPage.finish{
+    display: none;
+}
+
 
 .loadingPage > .loading{
     position: absolute;

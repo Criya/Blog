@@ -17,10 +17,17 @@
             overflow: hidden;
         }
     </style>
+    <script>
+
+        function a() {
+            setTimeout(function (){loadingSwitch.classList.add("finish")},1000)
+
+        }
+    </script>
 </head>
 
-<body>
-<div id="loadingSwitch" class="loadingPage active">
+<body onload="a()">
+<div id="loadingSwitch" class="loadingPage">
     <div class="loading"></div>
 </div>
 <div class="top-nav clearfix">
@@ -214,7 +221,4 @@
 
 </body>
 
-<script>
-    loadingSwitch.classList.remove("active")
-</script>
 </html>
