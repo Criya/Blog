@@ -5,7 +5,8 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>梁嘉豪的简历</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_616227_c1xqgzpjgb6v42t9.js"></script>
     <style type="text/css">
         .icon {
@@ -19,7 +20,9 @@
 </head>
 
 <body>
-
+<div id="loadingSwitch" class="loadingPage active">
+    <div class="loading"></div>
+</div>
 <div class="top-nav clearfix">
     <div class="top-nav-inner">
         <a href="#" class="logo">
@@ -211,4 +214,7 @@
 
 </body>
 
+<script>
+    loadingSwitch.classList.remove("active")
+</script>
 </html>
