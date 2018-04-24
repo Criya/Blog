@@ -1,17 +1,15 @@
 
-.loadingPage{
+.loadingPage.active{
+    display: flex;
     background: grey;
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
-
-.loadingPage.finish{
+.loadingPage{
     display: none;
 }
-
-
 .loadingPage > .loading{
     position: absolute;
     top: 0;
@@ -41,7 +39,7 @@
     bottom: 0;
     margin: auto;
 
-    animation: s 1.5s linear infinite;
+    animation:s 1.5s linear infinite;
 }
 
 .loading:after{
