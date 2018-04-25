@@ -39,22 +39,23 @@ h2 {
     text-align: center;
 }
 
-.banner {
-    height: 515px;
-    background: url(./img/banner-background.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
-.banner .mask {
-    height: 515px;
-    background-color: rgb(0, 0, 0, 0.8);
-}
-
 .top-nav {
     padding: 24px 0;
     position: fixed;
     width: 100%;
+    transition: all 0.5s;
+    color: #B7B7B7;
+
+}
+
+/*滑动后，位置不在顶部，添加这个stick样式*/
+.top-nav.stick {
+    background: white;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.25);
+    /*导航栏缩小*/
+    padding: 12px 0;
+    z-index: 1;
+    color: #3d4451;
 }
 
 .top-nav-inner {
@@ -80,11 +81,11 @@ h2 {
     float: left;
     margin-left: 16px;
     margin-right: 16px;
+    position: relative;
 }
 
 .top-nav nav > ul > li > a {
-    font-size: 12px;
-    color: #B7B7B7;
+    font-size: 14px;
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 8px;
@@ -92,10 +93,27 @@ h2 {
     display: block;
     border-bottom: solid 2px transparent;
     border-top: solid 2px transparent;
+    color: inherit;
 }
 
-.top-nav nav > ul > li > a:hover {
-    border-bottom: solid 2px #e6686d;
+.top-nav nav > ul > li > a:hover::after {
+    content: "";
+    width: 100%;
+    display: block;
+    background: #e6686d;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    animation: menuSlide 0.25s;
+}
+
+@keyframes menuSlide {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
 }
 
 .top-nav a {
@@ -114,6 +132,18 @@ h2 {
 
 .top-nav .logo .card {
     color: #9a9da2;
+}
+
+.banner {
+    height: 515px;
+    background: url(./img/banner-background.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask {
+    height: 515px;
+    background-color: rgb(0, 0, 0, 0.8);
 }
 
 .profile-card {
