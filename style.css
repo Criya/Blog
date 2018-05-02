@@ -96,15 +96,16 @@ h2 {
     color: inherit;
 }
 
-.top-nav nav > ul > li > a:hover::after {
+.top-nav nav > ul > li:hover > a::after {
     content: "";
     width: 100%;
     display: block;
     background: #e6686d;
-    height: 2px;
+    height: 3px;
     position: absolute;
     top: 100%;
     animation: menuSlide 0.25s;
+
 }
 
 @keyframes menuSlide {
@@ -114,6 +115,38 @@ h2 {
     100%{
         width: 100%;
     }
+}
+
+.top-nav nav > ul > li > .menu-list{
+    position: absolute;
+    /* absolute定位后，li元素会被压缩到a元素的宽度，nowrap静止换行*/
+    white-space: nowrap;
+    display: none;
+    background: #fff;
+    color: #3f4752;
+    right: 0;
+    margin-top: 3px;
+    animation: submenuSlide 0.25s;
+}
+
+
+
+@keyframes submenuSlide {
+    0%{
+        margin-right: 100%;
+    }
+    100%{
+        margin-right: 0;
+    }
+
+}
+
+.top-nav nav > ul > li > .menu-list.active{
+    display: block;
+}
+
+.top-nav nav > ul > li > .menu-list > li{
+    padding: 5px 10px;
 }
 
 .top-nav a {
