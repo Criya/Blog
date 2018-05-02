@@ -39,8 +39,6 @@ h2 {
     text-align: center;
 }
 
-
-
 .top-nav {
     padding: 24px 0;
     position: fixed;
@@ -51,7 +49,7 @@ h2 {
 }
 
 /*滑动后，位置不在顶部，添加这个stick样式*/
-.top-nav.stick{
+.top-nav.stick {
     background: white;
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.25);
     /*导航栏缩小*/
@@ -83,10 +81,11 @@ h2 {
     float: left;
     margin-left: 16px;
     margin-right: 16px;
+    position: relative;
 }
 
 .top-nav nav > ul > li > a {
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 8px;
@@ -97,8 +96,24 @@ h2 {
     color: inherit;
 }
 
-.top-nav nav > ul > li > a:hover {
-    border-bottom: solid 2px #e6686d;
+.top-nav nav > ul > li > a:hover::after {
+    content: "";
+    width: 100%;
+    display: block;
+    background: #e6686d;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    animation: menuSlide 0.25s;
+}
+
+@keyframes menuSlide {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
 }
 
 .top-nav a {
