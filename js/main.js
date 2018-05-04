@@ -34,18 +34,21 @@ for (let i=0; i<aTags.length; i++){
         //获取跳转位置
         let targetY = document.querySelector(e.currentTarget.getAttribute("href")).offsetTop - 80;
         let currentY = window.scrollY;
-        let n = 25; //下滑动次数
-        let t = 500 / 25; //多久滑一次
-        let d = +(targetY - currentY) / 25; //每次滑动距离
-        let i = 1;
-        let id = setInterval(()=>{
-            if (i++ >= n){
-                window.clearInterval(id);
-                return;
-            }
-            window.scrollTo(0, currentY + d * i)
-        }, t)
 
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
 
+        var coords = {y: currentY };
+        var tween = new TWEEN.Tween(coords)
+            .to({y: targetY }, 1000)
+            .easing(TWEEN.Easing.Cubic.Out)
+            .onUpdate(function() {
+                console.log(coords.y)
+                window.scrollTo(0, coords.y)
+            })
+            .start();
     }
 }
