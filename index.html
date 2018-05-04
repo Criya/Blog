@@ -33,31 +33,28 @@
         <nav>
             <ul class="clearfix">
                 <li>
-                    <a href="#">关于</a>
+                    <a href="#siteAbout">关于</a>
                 </li>
                 <li>
-                    <a href="#">技能</a>
+                    <a href="#siteSkill">技能</a>
                 </li>
-                <li class="submenuTrigger">
-                    <a href="#">作品</a>
+                <li>
+                    <a href="#siteProject">作品</a>
                     <ol class="menu-list">
-                        <li>作品:1</li>
-                        <li>作品:2</li>
-                        <li>作品:3</li>
-                    </ol>
-                </li>
-                <li class="submenuTrigger">
-                    <a href="#">博客</a>
-                    <ol class="menu-list">
-                        <li>博客:1</li>
-                        <li>博客:2</li>
+                        <li><a>作品:1</a></li>
+                        <li><a>作品:2</a></li>
+                        <li><a>作品:3</a></li>
                     </ol>
                 </li>
                 <li>
-                    <a href="#">日历</a>
+                    <a href="#siteBlog">博客</a>
+                    <ol class="menu-list">
+                        <li><a>博客:1</a></li>
+                        <li><a>博客:2</a></li>
+                    </ol>
                 </li>
                 <li>
-                    <a href="#">联系方式</a>
+                    <a href="siteContact">联系方式</a>
                 </li>
             </ul>
         </nav>
@@ -69,7 +66,7 @@
     <div class="mask">
     </div>
 </div>
-<main>
+<main id="siteAbout">
     <div class="profile-card">
         <div class="profile-card-inner clearfix">
             <div class="picture">
@@ -123,6 +120,7 @@
         </footer>
     </div>
 </main>
+
 <section>
     <div class="content">
         <p class="down-button-wrapper">
@@ -134,7 +132,8 @@
         </p>
     </div>
 </section>
-<section class="skills">
+
+<section id="siteSkill" class="skills">
     <h2>专业技能</h2>
     <div class="contenter">
         <ol class="clearfix">
@@ -190,7 +189,7 @@
     </div>
 </section>
 
-<section class="portfilo">
+<section id="siteProject" class="portfilo">
     <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -221,6 +220,7 @@
         <div class="small" style="top: 300px; left: 627px;"><img src="./img/3.jpg" alt=""></div>
     </div>
 </section>
+
 <script src="main.js"></script>
 </body>
 

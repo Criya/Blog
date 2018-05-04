@@ -14,18 +14,28 @@ window.onscroll = function () {
     }
 }
 
-/*显示二级菜单*/
-let liTags = document.getElementsByClassName("submenuTrigger");
+let liTags = document.querySelectorAll("#topNav nav ul li")
 for (let i=0; i<liTags.length; i++){
     liTags[i].onmouseenter = function (e) {
         let li = e.currentTarget;
-        let ol = li.getElementsByTagName('ol')[0];
-        ol.classList.add("active");
+        li.classList.add("active");
     }
 
     liTags[i].onmouseleave = function (e) {
         let li = e.currentTarget;
-        let ol = li.getElementsByTagName('ol')[0];
-        ol.classList.remove("active");
+        li.classList.remove("active");
+    }
+}
+
+let aTags = document.querySelectorAll("#topNav nav > ul > li > a")
+for (let i=0; i<aTags.length; i++){
+    aTags[i].onclick = function (e) {
+        e.preventDefault();
+        let a = e.currentTarget;
+        let aHref = a.getAttribute("href");
+        let element = document.querySelector(aHref);
+        let top = element.offsetTop;
+        window.scrollTo(0, top-80)
+
     }
 }
