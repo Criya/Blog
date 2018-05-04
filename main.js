@@ -31,11 +31,21 @@ let aTags = document.querySelectorAll("#topNav nav > ul > li > a")
 for (let i=0; i<aTags.length; i++){
     aTags[i].onclick = function (e) {
         e.preventDefault();
-        let a = e.currentTarget;
-        let aHref = a.getAttribute("href");
-        let element = document.querySelector(aHref);
-        let top = element.offsetTop;
-        window.scrollTo(0, top-80)
+        //获取跳转位置
+        let targetY = document.querySelector(e.currentTarget.getAttribute("href")).offsetTop - 80;
+        let currentY = window.scrollY;
+        let n = 25; //下滑动次数
+        let t = 500 / 25; //多久滑一次
+        let d = +(targetY - currentY) / 25; //每次滑动距离
+        let i = 1;
+        let id = setInterval(()=>{
+            if (i++ >= n){
+                window.clearInterval(id);
+                return;
+            }
+            window.scrollTo(0, currentY + d * i)
+        }, t)
+
 
     }
 }
