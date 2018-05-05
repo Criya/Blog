@@ -8,6 +8,10 @@ window.onload = function () {
 //加载about, skill, project的位置
 var navPosition = document.querySelectorAll("[data-z]");
 
+for (let i=0; i<navPosition.length; i++){
+    navPosition[i].classList.add("offset");
+}
+findCloset();
 window.onscroll = function () {
     //当滚动后，导航栏添加stick效果
     if(window.scrollY > 0){
@@ -19,6 +23,10 @@ window.onscroll = function () {
 
     //定位当前位置，导航栏高亮位置
 
+    findCloset();
+}
+
+function findCloset() {
     let index = 0;
     for (let i=1; i<navPosition.length; i++){
         let currentPosition = window.scrollY;
@@ -33,11 +41,11 @@ window.onscroll = function () {
     console.log(li.parentNode.childNodes[0].nodeType);
     for (let i = 0; i < bro.length; i++){
         if (bro[i].nodeType != 3)
-            bro[i].classList.remove("active");
+            bro[i].classList.remove("highlight");
     }
-    li.classList.add("active");
+    li.classList.add("highlight");
 
-
+    navPosition[index].classList.remove("offset");
 }
 
 let liTags = document.querySelectorAll("#topNav nav ul li")
