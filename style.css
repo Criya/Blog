@@ -40,6 +40,26 @@ h2 {
     text-align: center;
 }
 
+/*js定位后，向上弹窗口的效果*/
+[data-z].offset{
+    transform: translateY(200px);
+}
+[data-z]{
+    transform: translateY(0);
+    /*animation: slideUp 1s;*/
+    transition: all 1s;
+}
+/*
+
+@keyframes slideUp {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+*/
 
 .top-nav {
     padding: 24px 0;
@@ -77,6 +97,7 @@ h2 {
     padding: 0;
     margin: 0;
     list-style: none;
+    transition: all 1s;
 }
 
 .top-nav nav > ul > li {
@@ -98,7 +119,9 @@ h2 {
     color: inherit;
 }
 
-.top-nav nav > ul > li.active > a::after {
+.top-nav nav > ul > li.active > a::after,
+.top-nav nav > ul > li.highlight > a::after
+{
     content: "";
     width: 100%;
     display: block;
@@ -356,12 +379,21 @@ section.skills .contenter ol li .progress-bar {
     background-color: #fae1e2;
     margin-top: 4px;
     margin-bottom: 35px;
+    overflow: hidden;
 }
+
+section.skills.offset .contenter ol li .progress-bar{overflow: hidden;}
 
 section.skills .contenter ol li .progress-bar .progress {
     height: 5px;
     background-color: #e6696e;
     border-radius: 4px;
+    transform: translateX(0);
+    transition: all 2.5s;
+}
+
+section.skills.offset .contenter ol li .progress-bar .progress{
+    transform: translateX(-100%);
 }
 
 section.portfilo {
