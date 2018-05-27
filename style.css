@@ -478,4 +478,7 @@ section.portfilo .works img {
     display: block;
 }
 
-
+.swiper-container {
+    width: 600px;
+    height: 400px;
+}
