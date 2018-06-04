@@ -42,7 +42,7 @@ h2 {
 
 /*js定位后，向上弹窗口的效果*/
 [data-z].offset{
-    transform: translateY(200px);
+    transform: translateY(100px);
 }
 [data-z]{
     transform: translateY(0);
@@ -73,7 +73,7 @@ h2 {
 /*滑动后，位置不在顶部，添加这个stick样式*/
 .top-nav.stick {
     background: white;
-    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     /*导航栏缩小*/
     padding: 12px 0;
     z-index: 1;
@@ -107,17 +107,7 @@ h2 {
     position: relative;
 }
 
-.top-nav nav > ul > li > a {
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: bold;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    display: block;
-    border-bottom: solid 2px transparent;
-    border-top: solid 2px transparent;
-    color: inherit;
-}
+
 
 .top-nav nav > ul > li.active > a::after,
 .top-nav nav > ul > li.highlight > a::after
@@ -152,9 +142,8 @@ h2 {
     right: 0;
     margin-top: 3px;
     animation: submenuSlide 0.25s;
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-
 
 @keyframes submenuSlide {
     0%{
@@ -168,6 +157,18 @@ h2 {
 
 .top-nav nav ul >li.active > .menu-list{
     display: block;
+}
+
+.top-nav nav > ul > li > a {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    display: block;
+    border-bottom: solid 2px transparent;
+    border-top: solid 2px transparent;
+    color: inherit;
 }
 
 .top-nav nav > ul > li > .menu-list > li{
@@ -202,7 +203,7 @@ h2 {
 
 .banner .mask {
     height: 515px;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .profile-card {
@@ -400,85 +401,17 @@ section.portfilo {
     text-align: center;
 }
 
-section.portfilo nav {
-    display: inline-block;
-    vertical-align: top;
-}
-
-section.portfilo ol {
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 10px;
-}
-
-section.portfilo ol li {
-    float: left;
-    margin-left: 60px;
-    cursor: pointer;
-
-}
-
-section.portfilo ol li:first-child {
-    margin-left: 0;
-}
-
-section.portfilo nav .bar {
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    border-radius: 3px;
-}
-
-section.portfilo nav .bar .bar-inner {
-    transition: all 0.3s;
-}
-
-section.portfilo nav .bar.state1 .bar-inner {
-    height: 100%;
-    width: 50px;
-    margin-left: 0;
-    background-color: #e46a70;
-    border-radius: 3px;
-}
-
-section.portfilo nav .bar.state2 .bar-inner {
-    height: 100%;
-    width: 115px;
-    margin-left: 82.1px;
-    background-color: #e46a70;
-    border-radius: 3px;
-}
-
-section.portfilo nav .bar.state3 .bar-inner {
-    height: 100%;
-    width: 53px;
-    margin-left: 232px;
-    background-color: #e46a70;
-    border-radius: 3px;
-}
-
-section.portfilo .works {
-    width: 921px;
-    height: 576px;
-    position: relative;
-    margin-top: 30px;
-
-}
-
-section.portfilo .works .big,
-section.portfilo .works .small {
-    position: absolute;
-    border: 1px solid #cacaca;
-    /*去掉添加border后空白bug*/
-    /*font-size: 0;*/
-}
-
-/*去掉添加border后空白bug*/
-section.portfilo .works img {
-    display: block;
-}
-
 .swiper-container {
     width: 600px;
     height: 400px;
+}
+
+section.portfilo .swiper-button-prev {
+    left: 70px;
+    top: 265px;
+}
+
+section.portfilo .swiper-button-next {
+    right: 70px;
+    top: 265px;
 }

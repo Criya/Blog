@@ -24,9 +24,6 @@
 
 <body>
 
-<div id="loadingSwitch" class="loadingPage active">
-    <div class="loading"></div>
-</div>
 <div id="topNav" class="top-nav clearfix">
     <div class="top-nav-inner">
         <a href="#" class="logo">
@@ -62,7 +59,6 @@
             </ul>
         </nav>
     </div>
-
 </div>
 
 <div class="banner">
@@ -123,7 +119,6 @@
         </footer>
     </div>
 </main>
-
 
 <section>
     <div class="content">
@@ -195,34 +190,7 @@
 
 <section id="siteProject" class="portfilo" data-z>
     <h2>作品集</h2>
-    <nav>
-        <ol class="clearfix">
-            <li id="portfilo1">全部</li>
-            <li id="portfilo2">原生JS&amp;CSS</li>
-            <li id="portfilo3">框架</li>
-        </ol>
-        <div id="portfiloBar" class="bar state1">
-            <div class="bar-inner">
-            </div>
-        </div>
-    </nav>
-    <script>
-        portfilo1.onclick = function () {
-            portfiloBar.className = 'bar state1'
-        }
-        portfilo2.onclick = function () {
-            portfiloBar.className = 'bar state2'
-        }
-        portfilo3.onclick = function () {
-            portfiloBar.className = 'bar state3'
-        }
-    </script>
 
-    <!--<div class="works">-->
-        <!--<div class="big" style="top: 0; left: 0;"><img src="./img/1.jpg" alt=""></div>-->
-        <!--<div class="small" style="top: 0; left: 627px;"><img src="./img/2.jpg" alt=""></div>-->
-        <!--<div class="small" style="top: 300px; left: 627px;"><img src="./img/3.jpg" alt=""></div>-->
-    <!--</div>-->
     <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
@@ -231,33 +199,17 @@
             <img class="swiper-slide" src="img/canvas.png">
             <img class="swiper-slide" src="img/slide.png">
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-
-
-    </img>
-
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </section>
 
-
-
 <script src="js/Tween.js"></script>
-<script src="js/main.js"></script>
-
-<script>
-    var mySwiper = new Swiper ('.swiper-container', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        }
-
-    })
-</script>
+<script src="js/topNav-sticky.js"></script>
+<script src="js/init-swiper.js"></script>
+<script src="js/smoothly-navagation.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/topNav-sticky.js"></script>
 </body>
 
 </html>
