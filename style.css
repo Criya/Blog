@@ -415,3 +415,16 @@ section.portfilo .swiper-button-next {
     right: 70px;
     top: 265px;
 }
+
+section.message form,section.message .messageList{
+    max-width:400px;
+    margin: 30px auto;
+
+}
+section.message .messageList li{
+    background-color: #FFF;
+    padding: 6px;
+    margin: 2px;
+    border: 1px solid #bcbcbc;
+
+}
