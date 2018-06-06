@@ -45,7 +45,6 @@
                 e.preventDefault();
                 this.getInputMessage()
                 this.saveInputMessage();
-                this.reloadMessage();
             })
         },
 
@@ -59,7 +58,14 @@
         },
 
         saveInputMessage: function () {
-            this.model.save(this.message)
+            var {name, content} = this.message;
+            if(name && content){
+                this.model.save(this.message);
+                this.reloadMessage();
+            }else {
+                alert("请填入完整的信息");
+            }
+
         },
 
         reloadMessage: function () {
