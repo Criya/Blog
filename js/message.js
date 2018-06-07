@@ -1,40 +1,24 @@
 !function () {
-    var view = document.querySelector("#siteMessage");
+    var view = View("#siteMessage");
 
-    var model = {
-        init:function (data) {
-            AV.init(data)
-        },
-        get: function () {
-            var query = new AV.Query('Messages');
-            return query.find();
-        },
-        save: function (inputMessage) {
-            var Messages = AV.Object.extend('Messages');
-            var message = new Messages();
-            message.save({
-                name: inputMessage.name,
-                content: inputMessage.content,
-            })
-        }
-    }
+    var model = Model({
+        /** leanCloud 初始化 **/
 
-    var controller = {
-        view: null,
-        form: null,
-        model: null,
-        avInfo:{
+        keyId: {
             appId: 'dBiiz9LeNIyQjCkyCCqbhF2e-gzGzoHsz',
             appKey: 'uIh8KspCAegHJ78l58DpPzUV'
         },
+        resourceName: "Messages",
+
+    })
+
+    var controller = Controller({
+        form: null,
         message: null,
 
         init: function (view, model) {
-            this.view = view;
-            this.model = model;
+            //this为封装后的controller object
             this.form = view.querySelector("form")
-            this.model.init(this.avInfo);
-            this.bindEvent();
             this.loadHistoryMessage();
 
         },
@@ -77,7 +61,7 @@
         },
 
         loadHistoryMessage: function () {
-            this.model.get().then((m) => {
+            this.model.fetch().then((m) => {
                 let array = m.map((item)=> item.attributes);
                 array.reverse().forEach((item)=>{
                     var li = document.createElement("li");
@@ -87,15 +71,7 @@
             })
         }
 
-    }
-
-    // var TestObject = AV.Object.extend('TestObject');
-    // var testObject = new TestObject();
-    // testObject.save({
-    //     words: 'Hello World!'
-    // }).then(function(object) {
-    //     alert('LeanCloud Rocks!');
-    // })
+    })
 
     controller.init(view, model)
 }.call()

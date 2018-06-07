@@ -1,12 +1,9 @@
 !function () {
-    var view = document.querySelector("#topNav");
-    var controller = {
-        view: null,
+    var view = View("#topNav");
+    var controller = Controller({
         liTags: null,
         init: function (view) {
-            this.view = view;
             this.liTags = view.querySelectorAll("nav ul li")
-            this.bindEvents();
             this.scrollFunc();
         },
         bindEvents: function () {
@@ -54,7 +51,7 @@
             }
         },
 
-    }
+    })
 
     controller.init(view)
 }.call()

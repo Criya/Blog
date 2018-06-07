@@ -1,11 +1,6 @@
 !function(){
-    var view = document.querySelector("#topNav");
-    var controller = {
-        view: null,
-        init: function (view) {
-            this.view = view;
-            this.bindEvent();
-        },
+    var view = View("#topNav");
+    var controller = Controller({
         bindEvent: function () {
             window.addEventListener("scroll", ()=>{
                 //当滚动后，导航栏添加stick效果
@@ -23,7 +18,7 @@
         deactive: function () {
             this.view.classList.remove("stick");
         }
-    }
+    })
 
     controller.init(view);
 }.call();

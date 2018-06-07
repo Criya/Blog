@@ -30,7 +30,7 @@
         while(upFlow-- > 1){
             navPosition[upFlow].classList.remove("offset");
         }
-        console.log(index)
+
         let li = document.querySelector('[href="#'+tagId+'"]').parentNode
         let bro = li.parentNode.childNodes;
         for (let i = 0; i < bro.length; i++){

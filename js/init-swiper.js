@@ -1,9 +1,7 @@
 !function () {
-    var view = document.querySelector("#mySwiper");
-    var controller = {
-        view: null,
+    var view = View("#mySwiper");
+    var controller = Controller({
         init: function (view) {
-            this.view = view
             this.swiperInit()
         },
         swiperOption: {
@@ -16,6 +14,6 @@
         swiperInit: function () {
             new Swiper ('.swiper-container',this.swiperOption )
         }
-    }
+    })
     controller.init(view)
 }.call()
